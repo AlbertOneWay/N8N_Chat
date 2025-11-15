@@ -35,6 +35,9 @@ const MessageInput = ({ onSendMessage, disabled, userStatus }) => {
           { text: '📚 /fuentes', action: '/fuentes', color: 'bg-purple-600 hover:bg-purple-700' },
           { text: '⚡ /breve', action: '/breve', color: 'bg-green-600 hover:bg-green-700' },
           { text: '📝 /extendido', action: '/extendido', color: 'bg-orange-600 hover:bg-orange-700' },
+          { text: '🤖 /modelos', action: '/modelos', color: 'bg-indigo-600 hover:bg-indigo-700' },
+          { text: '🔥 /gpt', action: '/gpt', color: 'bg-emerald-600 hover:bg-emerald-700' },
+          { text: '⭐ /mistral', action: '/mistral', color: 'bg-violet-600 hover:bg-violet-700' },
           { text: '🚪 /salir', action: '/salir', color: 'bg-red-600 hover:bg-red-700' }
         ]
       case 'opt_out':
@@ -72,7 +75,7 @@ const MessageInput = ({ onSendMessage, disabled, userStatus }) => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={userStatus === 'need_opt_in' ? 'Escribe "ACEPTO" para continuar...' : 'Escribe tu mensaje aquí...'}
+            placeholder={userStatus === 'need_opt_in' ? 'Escribe para continuar...' : 'Escribe tu mensaje aquí...'}
             disabled={disabled}
             className="w-full border-2 border-blue-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed transition-all duration-200 text-gray-800 placeholder-gray-500"
           />
